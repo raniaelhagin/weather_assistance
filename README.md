@@ -123,7 +123,7 @@ pip install -r requirements.txt
 ### 3. Configure API keys
 
 ```bash
-cp .env.example .env
+touch .env
 ```
 
 Edit `.env` and add your keys:
