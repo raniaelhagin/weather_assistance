@@ -1,0 +1,24 @@
+# requirements.txt
+# Weather Assistant — full dependency list
+# Install with: pip install -r requirements.txt
+
+# LLM
+openai>=1.30.0                # Groq uses OpenAI-compatible client
+
+# Weather API 
+requests>=2.31.0              # HTTP calls to OpenWeatherMap
+
+# Vector Database 
+faiss-cpu>=1.8.0              # FAISS vector index (CPU version)
+sentence-transformers>=2.7.0  # all-MiniLM-L6-v2 embedding model
+numpy>=1.26.0                 # required by FAISS
+
+# PDF Processing ─
+pdfplumber>=0.11.0            # primary PDF text extractor
+pypdf>=4.0.0                  # fallback PDF extractor
+
+# UI
+streamlit>=1.35.0             # web interface
+
+# Environment 
+python-dotenv>=1.0.0          # loads .env file for API keys
