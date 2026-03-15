@@ -1,4 +1,4 @@
-# 🌤️ Weather Assistant
+# Weather Assistant
 
 A conversational AI assistant that answers free-text questions about **current weather**, **outdoor activities**, and **clothing recommendations** for any city in the world — powered by an open-source LLM, live weather data, and a vector knowledge base.
 
