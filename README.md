@@ -97,7 +97,6 @@ weather_assistance/
 │   └── test_weather_api.py
 │
 ├── .env                          # Your API keys (never commit this)
-├── .env.example                  # Template — copy to .env
 ├── .gitignore
 ├── requirements.txt
 ├── install_requirements.cmd      # Windows installer script
@@ -117,12 +116,6 @@ cd weather_assistance
 
 ### 2. Install dependencies
 
-**Windows:**
-```bash
-install_requirements.cmd
-```
-
-**macOS / Linux:**
 ```bash
 pip install -r requirements.txt
 ```
@@ -145,14 +138,10 @@ OPENWEATHER_API_KEY=your-owm-key-here
 | `GROQ_API_KEY` | [console.groq.com](https://console.groq.com) — free tier |
 | `OPENWEATHER_API_KEY` | [openweathermap.org/api](https://openweathermap.org/api) — free tier |
 
-### 4. Build the knowledge base index
-
-Place your PDF files in the `data/` folder, then run the app — the FAISS index is built automatically on first launch and cached to `data/faiss_index/` for all subsequent runs.
-
-### 5. Run the app
+### 4. Run the app
 
 ```bash
-streamlit run app.py
+py -m streamlit run app.py
 ```
 
 Open [http://localhost:8501](http://localhost:8501) in your browser.
@@ -306,23 +295,6 @@ Countries: Egypt, USA (California), Japan, Brazil, India, Canada, Australia, Rus
 Conditions: Sunny, Rainy, Snowy, Windy, Cloudy
 
 Each merged chunk contains the narrative, temperature range, activities, and clothing in a single text block — one chunk per `(condition, country)` pair.
-
----
-
-## Running Tests
-
-```bash
-# From the project root
-pytest tests/
-
-# Individual module
-pytest tests/test_pdf_processor.py -v
-pytest tests/test_vector_db.py -v
-pytest tests/test_weather_api.py -v
-pytest tests/test_llm_client.py -v
-```
-
-Tests use `conftest.py` in the `tests/` folder to add the project root to `sys.path` automatically.
 
 ---
 
