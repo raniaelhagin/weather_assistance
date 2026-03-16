@@ -141,7 +141,7 @@ OPENWEATHER_API_KEY=your-owm-key-here
 ### 4. Run the app
 
 ```bash
-py -m streamlit run app.py
+streamlit run app.py
 ```
 
 Open [http://localhost:8501](http://localhost:8501) in your browser.
